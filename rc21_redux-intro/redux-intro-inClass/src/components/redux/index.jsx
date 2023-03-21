@@ -4,10 +4,10 @@
      counter:0
  }
  export const  reducer =(state= initialState, action)=>{
-     
-switch (key) {
-     case value:
-          
+
+switch (action.type) {
+     case "INCREASE":
+       return {counter:state.counter +1}   
           break;
 
      default:
