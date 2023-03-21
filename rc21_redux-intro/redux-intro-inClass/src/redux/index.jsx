@@ -8,7 +8,7 @@
 switch (action.type) {
      case "INCREASE":
        return {counter:state.counter +1}   
-          break;
+
 
      default:
           break;
