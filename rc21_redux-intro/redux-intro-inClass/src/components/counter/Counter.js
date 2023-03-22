@@ -1,12 +1,17 @@
-import "./Counter.css";
-import { useDispatch, useSelector } from "react-redux";
-import { dec, inc, reset } from "../../redux/actions/counterAction";
+import "./Counter.css"
+import { useDispatch, useSelector } from "react-redux"
+import { dec, inc, reset } from "../../redux/actions/counterAction"
+
+//! Reducer'lara key olarak isim atamasi yapilmazsa bu sekilde cagrilabilriler.
+//? const counter = useSelector((state) => state.counterReducer.counter)
+//? const todoList = useSelector((state) => state.todoReducer.todoList)
 
 const Counter = () => {
-  const dispatch = useDispatch();
-  // const counter = useSelector((state)=>state.counter)
-  // const counter = useSelector((state)=>state.count.counter)
-  const { counter } = useSelector((state) => state.count);
+  const dispatch = useDispatch()
+  // const counter = useSelector((state) => state.counter)
+  // const counter = useSelector((state) => state.count.counter)
+  const { counter } = useSelector((state) => state.count)
+
   return (
     <div className="app">
       <h2 className="counter-header">Counter With Redux</h2>
@@ -29,14 +34,13 @@ const Counter = () => {
         <button
           className="counter-button negative"
           // onClick={() => dispatch({ type: "DECREASE" })}
-
           onClick={() => dispatch(dec())}
         >
           decrease
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter
