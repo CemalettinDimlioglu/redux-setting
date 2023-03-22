@@ -9,6 +9,6 @@ function App() {
       <Todo />
     </div>
   );
-}
+},
 
 export default App;
